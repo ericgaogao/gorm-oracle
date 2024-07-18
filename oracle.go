@@ -41,7 +41,7 @@ type Dialector struct {
 
 //goland:noinspection GoUnusedExportedFunction
 func Open(dsn string) gorm.Dialector {
-	return &Dialector{Config: &Config{DSN: dsn}}
+	return &Dialector{Config: &Config{DSN: dsn, IgnoreCase: true}}
 }
 
 //goland:noinspection GoUnusedExportedFunction
