@@ -58,7 +58,7 @@ func Create(db *gorm.DB) {
 		if hasConflict {
 			MergeCreate(db, onConflict, createValues)
 		} else {
-			stmt.AddClauseIfNotExists(clause.Insert{Table: clause.Table{Name: stmt.Schema.Table}})
+			stmt.AddClauseIfNotExists(clause.Insert{})
 			stmt.AddClause(clause.Values{Columns: createValues.Columns, Values: [][]interface{}{createValues.Values[0]}})
 
 			if hasDefaultValues {
