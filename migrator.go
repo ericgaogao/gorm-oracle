@@ -16,6 +16,7 @@ type Migrator struct {
 	migrator.Migrator
 }
 
+// todo 大小写问题
 // AutoMigrate 自动迁移模型为表结构
 //
 //	// 迁移并设置单个表注释
